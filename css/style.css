@@ -1,0 +1,255 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 12%;
+    background-image: url('../assets/hypnotize.png');
+    background-repeat: repeat;
+}
+
+body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #728af1, #63f8f1);
+    opacity: .6;
+    z-index: -1;
+}
+
+.center {
+    text-align: center;
+}
+
+#title {
+    font-family: 'Anton', sans-serif !important;
+    font-size: 80px !important;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#subtitle {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    line-height: 36px;
+}
+
+hr {
+    border: 2px solid #fff !important;
+    width: 20%;
+    margin-bottom: 2rem !important;
+    margin-top: 2rem !important;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.guess {
+    display: inline;
+    font-size: 24px;
+    border: 1px solid #6af8b2;
+    padding: 12px 17px;
+    border-radius: 10%;
+    /* border-radius: 50%; */
+    margin-right: 8px;
+    color: #6af8b2;
+}
+
+#footer {
+    width: 100%;
+    border-top: solid 2px black;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+}
+
+#input-parent {
+    margin: 0 auto 0 auto;
+    width: 160px;
+    margin: 5% auto 50px;
+    position: relative;
+}
+
+#player-input {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    font-size: 60px;
+    border: 2px solid #a6c1f4;
+    color: #6af8b2;
+}
+
+#player-input::placeholder {
+    color: #6af8b2;
+}
+
+.reset,
+#hint {
+    background-color: #dfe5fa;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.reset:hover,
+#hint:hover {
+    background-color: #e8ebf7;
+}
+
+#submit {
+    background-color: #a6c1f4;
+    color: #fff;
+    margin-right: 5px;
+}
+
+#submit:hover {
+    background-color: #bdd1f7;
+}
+
+#game-card {
+    background-color: #fff;
+    -webkit-box-shadow: 0px 9px 27px -7px rgba(52, 55, 63, 0.8);
+    -moz-box-shadow: 0px 9px 27px -7px rgba(52, 55, 63, 0.8);
+    box-shadow: 0px 9px 27px -7px rgba(52, 55, 63, 0.8);
+    padding: 40px 20px 60px 20px;
+    margin-top: -70px;
+    -webkit-animation: fadein 1s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 1s;
+    /* Internet Explorer */
+    -o-animation: fadein 1s;
+    /* Opera < 12.1 */
+    animation: fadein 1s;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Firefox < 16 */
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Internet Explorer */
+
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Opera < 12.1 */
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#guess-list {
+    margin: 20px 0 40px 0;
+}
+
+#guess-title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #a6c1f4;
+}
+
+input#player-input:focus {
+    outline: none;
+    box-shadow: 0px 0px 2px #6f90cc;
+}
+
+#guess-note {
+    font-family: 'Anton', sans-serif !important;
+    font-size: 20px !important;
+    text-transform: uppercase;
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    color: #6af8b2;
+}
+
+#winLose {
+    position: fixed;
+    margin: 0 auto;
+    background-color: #fff;
+    z-index: 1;
+    left: 40%;
+    top: 30%;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 9px 27px -7px rgba(52, 55, 63, 0.8);
+    -moz-box-shadow: 0px 9px 27px -7px rgba(52, 55, 63, 0.8);
+    box-shadow: 0px 9px 27px -7px rgba(52, 55, 63, 0.8);
+}
+
+#winLoseWrap {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(223, 230, 250, 0.7);
+    z-index: 1;
+    animation: fadein 1s;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+#winLoseNote {
+    color: #6af8b2;
+    font-family: 'Anton', sans-serif !important;
+    font-size: 60px !important;
+    text-transform: uppercase;
+}
+
+.hidden {
+    display: none !important;
+}

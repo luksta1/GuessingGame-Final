@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Guessing Game</title>
+
+    <!-- Bootstrap and CSS here-->
+    <link href="https://fonts.googleapis.com/css?family=Anton|Open+Sans+Condensed:300|Teko:700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css" </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <body>
+
+        <div class="container-fluid">
+            <div id="winLoseWrap" class="hidden">
+                <div id="winLose">
+                    <h1 id="winLoseNote">You Win!</h1><br><button class="reset btn btn-default"><i class="fa fa-undo" aria-hidden="true"></i>   Reset</button></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <div id="headers">
+                        <h1 id="title">The Guessing Game</h1>
+                        <hr align="left">
+                        <h3 id="subtitle">The object of this game is to try and guess the corrct number. You have 5 tries and are able to guess any number between 1-100. Good luck!</h3>
+                        <h3 id="guess-note"><span id="note-1"></span><span id="note-2"></span></h3>
+                    </div>
+                </div>
+
+                <div class="col-md-1"></div>
+                <div id="game-card" class="col-md-4 center">
+                    <div id="input-parent">
+                        <input id="player-input" class="center" placeholder="#" maxlength="3" autofocus="autofocus"></input>
+                    </div>
+                    <hr style="border: 2px solid rgb(107, 248, 178) !important;">
+                    <div id="guesses">
+                        <h5 id="guess-title">Your Guesses</h5>
+                        <ul id="guess-list">
+                            <li class="guess">--</li>
+                            <li class="guess">--</li>
+                            <li class="guess">--</li>
+                            <li class="guess">--</li>
+                            <li class="guess">--</li>
+                        </ul>
+                    </div>
+
+                    <div id="menu-btns">
+                        <button id="submit" class="btn btn-default"><i class="fa fa-bolt" aria-hidden="true"></i>   Guess</button>
+                        <button class="reset btn btn-default"><i class="fa fa-undo" aria-hidden="true"></i>   Reset</button>
+                        <button id="hint" class="btn btn-default"><i class="fa fa-question-circle" aria-hidden="true"></i>   Hint</button>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+
+
+
+        <div id="footer" class="center">
+            <!-- <div class="row">
+                <div class="col-sm-3">
+                    <img class="img-responsive" id="fa-logo" src="assets/fa-logo@2x.png">
+                </div>
+
+                <div class="col-sm-3">
+                    <h4>Project by Luke Pura</h4>
+                </div>
+
+                <div class="col-sm-3">
+                    <img class="img-responsive" id="gh-logo" src="assets/grace_hopper_academy.png">
+
+                </div>
+
+
+            </div> -->
+        </div>
+
+        <script src="https://use.fontawesome.com/da717f7c8c.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/GuessingGame.js"></script>
+    </body>
+
+</html>
