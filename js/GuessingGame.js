@@ -39,7 +39,7 @@ Game.prototype.difference = function() {
 
 Game.prototype.isLower = function() {
     return this.playersGuess < this.winningNumber ? true : false;
-}
+};
 
 Game.prototype.checkGuess = function() {
     if (this.playersGuess === this.winningNumber) {
@@ -72,7 +72,7 @@ Game.prototype.checkGuess = function() {
             }
         }
     }
-}
+};
 
 Game.prototype.playersGuessSubmission = function(num) {
     if (num < 1 || num > 100 || typeof num !== "number") {
@@ -84,7 +84,7 @@ Game.prototype.playersGuessSubmission = function(num) {
 }
 
 function newGame() {
-    return new Game;
+    return new Game();
 }
 
 Game.prototype.provideHint = function() {
@@ -92,7 +92,7 @@ Game.prototype.provideHint = function() {
     hintArr.push(this.winningNumber, generateWinningNumber(), generateWinningNumber());
 
     return shuffle(hintArr);
-}
+};
 
 function makeAGuess(game) {
     var guess = $("#player-input").val();
@@ -107,13 +107,13 @@ $(document).ready(function() {
 
     $("#submit").click(function() {
         makeAGuess(game);
-    })
+    });
 
     $("#player-input").keypress(function(event) {
         if (event.which == 13) {
             makeAGuess(game);
         }
-    })
+    });
 
     $('#hint').click(function() {
         var hints = game.provideHint();
@@ -127,5 +127,5 @@ $(document).ready(function() {
         $('.guess').text('--');
         $('#hint, #submit').prop("disabled", false);
         $("#winLoseWrap").toggleClass('hidden');
-    })
+    });
 });
